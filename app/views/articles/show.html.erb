@@ -1,2 +1,17 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <article>
+        <h1>
+          <%= @article.title %>
+          <small>
+            <%= link_to "✏️" , edit_article_path(@article) %>
+            <%= link_to "🚮️", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }%>
+          </small>
+        </h1>
+        <hr>
+        <p><%= @article.content %></p>
+      </article>
+    </div>
+  </div>
+</div>

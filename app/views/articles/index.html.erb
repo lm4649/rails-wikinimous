@@ -1,2 +1,14 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <% @articles.each do |article| %>
+        <article>
+          <h2>
+            <%= link_to "#{article.title}",article_path(article) %>
+          </h2>
+            <%= article.content %>
+        </article>
+        <% end %>
+    </div>
+  </div>
+</div>
